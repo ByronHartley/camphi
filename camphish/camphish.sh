@@ -3,7 +3,7 @@
 # Powered by kupal
 
 # Windows compatibility check
-if [[ "$(uname -a)" == *"MINGW"* ]] || [[ "$(uname -a)" == *"MSYS"* ]] || [[ "$(uname -a)" == *"CYGWIN"* ]] || [[ "$(uname -a)" == *"Windows"* ]]; then
+if [[ "$(uname -a)" == "MINGW" ]] || [[ "$(uname -a)" == "MSYS" ]] || [[ "$(uname -a)" == "CYGWIN" ]] || [[ "$(uname -a)" == "Windows" ]]; then
   # We're on Windows
   windows_mode=true
   echo "Windows system detected. Some commands will be adapted for Windows compatibility."
@@ -45,7 +45,6 @@ printf " \e[1;77m Custom Banner Style \e[0m\n"
 
 printf "\n"
 }
-
 dependencies() {
 command -v php > /dev/null 2>&1 || { echo >&2 "I require php but it's not installed. Install it. Aborting."; exit 1; }
 }
